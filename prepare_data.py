@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+"""
+This script downloads Mailman archive files for BangPypers ML from 2007-2019.
+It also extracts individual emails and prepares email, sender and thread statistics.
+
+"""
+
 import requests
 import calendar
 import os
@@ -85,7 +92,6 @@ def extract_emails(root='archives', years=range(2007, 2020)):
     for y in years:
         n_emails = 0
         m_count = 0
-        all_senders = []
 
         for m in range(1, 13):
             month = calendar.month_name[m]
